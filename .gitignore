@@ -1,0 +1,50 @@
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+bin/
+lib/
+include/
+pip-selfcheck.json
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints and caches
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.local
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Operating System files
+Thumbs.db
+db.sqlite3
+.DS_Store
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg

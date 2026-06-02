@@ -64,7 +64,7 @@ pip install pymupdf pandas matplotlib ipykernel
      ```bash
      source venv/bin/activate
      ```
-
+git commit
 2. **Run the Notebook**:
    Open the notebook in your preferred IDE or command line using Jupyter:
    ```bash
