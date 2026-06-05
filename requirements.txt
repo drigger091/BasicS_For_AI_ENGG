@@ -5,3 +5,5 @@ langchain
 transformers==4.52.4
 tokenizers==0.21.1
 huggingface_hub==0.31.2
+sentence-transformers
+faiss-cpu

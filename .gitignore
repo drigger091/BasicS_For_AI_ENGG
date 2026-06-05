@@ -48,3 +48,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# Data and Models
+*.faiss
+*.pkl
