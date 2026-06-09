@@ -7,8 +7,7 @@ import pickle
 index = faiss.read_index("wiki_base.faiss")
 with open("embedded_chunks.pkl", "rb") as f:
     embedded_chunks = pickle.load(f)
-def faiss_retrive(query, k=5):
-
+def faiss_retrieve(query, k=5):
 
 
     embedding_model = SentenceTransformer(
