@@ -6,6 +6,8 @@ This repository contains a Jupyter Notebook (`chunking_loading_etc.ipynb`) demon
 
 - `data/`: Folder containing source documents (e.g., `mamba 3.pdf`).
 - `chunking_loading_etc.ipynb`: The main notebook containing the implementation of the pipeline.
+- `retriver.ipynb`: Notebook demonstrating retrieval strategies (Dense, Sparse, Hybrid, Reranking).
+- `faiss_ret.py`, `bm25_ret.py`, `hybrid_ret.py`, `reranker.py`: Python modules for different retrieval and ranking strategies.
 - `requirements.txt`: List of required Python packages.
 - `README.md`: This document, describing the project and its setup.
 
@@ -35,6 +37,14 @@ Analyzes chunk count and text lengths using data science tools:
 - **Pandas**: Structures chunk metadata and calculates chunk lengths.
 - **Matplotlib**: Visualizes the distribution of text chunks per article.
 
+### 5. Advanced Retrieval Pipeline
+Implements multiple retrieval strategies to find the most relevant chunks for a given query:
+- **Dense Retrieval (`faiss_ret.py`)**: Uses `SentenceTransformer` (`BAAI/bge-base-en-v1.5`) and a FAISS index for semantic search.
+- **Sparse Retrieval (`bm25_ret.py`)**: Uses the BM25 algorithm for exact keyword matching and lexical search.
+- **Hybrid Retrieval (`hybrid_ret.py`)**: Combines results from FAISS and BM25 using Reciprocal Rank Fusion (RRF) to balance semantic and lexical matches.
+- **Reranking (`reranker.py`)**: Uses a Cross-Encoder model (`BAAI/bge-reranker-base`) to score and rerank the retrieved candidates for high precision.
+- **Notebook (`retriver.ipynb`)**: Demonstrates the execution and comparison of these retrieval methods.
+
 ---
 
 ## Setup and Installation
@@ -48,7 +58,7 @@ Install the required packages using the `requirements.txt` file and additional p
 
 ```bash
 pip install -r requirements.txt
-pip install pymupdf pandas matplotlib ipykernel
+pip install pymupdf pandas matplotlib ipykernel sentence-transformers faiss-cpu rank_bm25
 ```
 
 ---
